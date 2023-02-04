@@ -53,10 +53,10 @@ app.put("/getalltodolist",async (req, res) => {
     try {
         //         const updatedInfo=await User.updateOne({_id:req.query.id},{$set:{is_verified:1}})
         const updatecartdata = await todomodel.updateOne(
-          { taskid: req.body.id },
+          { taskid: req.body.taskid },
           {
             $set: {
-                taskname: req.body.name,
+                taskname: req.body.taskname,
               
             },
           }
@@ -71,7 +71,7 @@ app.put("/getalltodolist",async (req, res) => {
 app.delete("/getalltodolist",async (req, res) => {
 
     try {
-        const deletetodolist = await todomodel.deleteOne({ taskid: req.body.id });
+        const deletetodolist = await todomodel.deleteOne({ taskid: req.body.taskid });
         res.status(200).json("Item remove from cart succefully");
       } catch (error) {
         console.log(error);

@@ -7,5 +7,5 @@ export default mongoose
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
-  .then(() => console.log("connection Database Tshirt......"))
-  .catch((err) => console.log("image 111111111111111111",err));
+  .then(() => console.log("connection Database......"))
+  .catch((err) => console.log("errorrrrrrrrrrrrrrrrr",err));
