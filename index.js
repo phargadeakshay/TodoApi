@@ -94,7 +94,7 @@ app.listen(port, () => {
 
 const toDoSchema = new mongoose.Schema({
     taskname:{type:String,require:true}, 
-    taskid:{type:String,require:true},
+    taskid:{type:Number,require:true},
 }) 
 
 const todomodel = new mongoose.model("todomodel",toDoSchema)
